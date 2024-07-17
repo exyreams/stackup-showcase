@@ -1,0 +1,16 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 213" width="40" height="17">
+	<title>showcase-svg</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 97px;fill: #000000;font-weight: 700;font-family: "Poppins-Bold", "Poppins" } 
+		.t1 { font-size: 97px;fill: #000000;font-weight: 400;font-family: "Poppins-Regular", "Poppins" } 
+	</style>
+	<g id="Folder 1">
+	</g>
+	<text id="Showcase By StackUp" style="transform: matrix(.9,0,0,.9,13.4,73.791)" >
+		<tspan x="0" y="0" class="t0">S</tspan><tspan  y="0" class="t0">h</tspan><tspan  y="0" class="t0">o</tspan><tspan  y="0" class="t0">w</tspan><tspan  y="0" class="t0">c</tspan><tspan  y="0" class="t0">a</tspan><tspan  y="0" class="t0">s</tspan><tspan  y="0" class="t0">e</tspan><tspan  y="0" class="t1">
+</tspan>
+		<tspan x="0" y="116.4" class="t1">B</tspan><tspan  y="116.4" class="t1">y</tspan><tspan  y="116.4" class="t1"> </tspan><tspan  y="116.4" class="t1">S</tspan><tspan  y="116.4" class="t1">t</tspan><tspan  y="116.4" class="t1">a</tspan><tspan  y="116.4" class="t1">c</tspan><tspan  y="116.4" class="t1">k</tspan><tspan  y="116.4" class="t1">U</tspan><tspan  y="116.4" class="t1">p</tspan><tspan  y="116.4" class="t1">
+</tspan>
+	</text>
+</svg>
