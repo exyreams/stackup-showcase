@@ -6,9 +6,7 @@ import { Zoom } from "@mui/material";
 const Tooltips = ({ title, placement, enterDelay, leaveDelay, children }) => (
   <Tooltip
     title={
-      <span className="font-poppins font-light text-base p-4">
-        {title}
-      </span>
+      <span className="font-poppins font-medium text-base p-2">{title}</span>
     }
     arrow
     enterDelay={enterDelay}
