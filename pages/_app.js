@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // noinspection ES6PreferShortImport
 import React from "react";
 import Head from "next/head";
@@ -10,8 +11,8 @@ import "../styles/globals.css";
 import { Footer, Navbar, Sidebar } from "../components"; // Adjusted imports
 
 const Showcase = ({ Component, pageProps }) => (
-  <ThemeProvider attribute="class">
-    <div className="font-poppins bg-white">
+  <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
+    <div className="font-poppins bg-white dark:bg-stackup-dark min-h-screen">
       <Head>
         <link rel="icon" type="image/ico" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -22,10 +23,10 @@ const Showcase = ({ Component, pageProps }) => (
         <Sidebar />
         <div className="flex-1 flex flex-col">
           <Navbar />
-          <div className="flex-grow p-4">
+          <div className="flex-grow">
             <Component {...pageProps} />
           </div>
-          <Footer className="p-4" />
+          <Footer />
         </div>
       </div>
     </div>

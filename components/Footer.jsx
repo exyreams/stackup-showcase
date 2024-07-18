@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" text-black p-4">
+    <div className=" text-black dark:text-white p-6 border-t border-stackup-gray dark:border-stackup-gray/10">
       <div className="flex justify-start items-center">
         <p className="text-sm font-regular mr-4">© 2024 Earn by StackUp</p>
         <ul className="flex space-x-6">

@@ -9,8 +9,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "stack-gray": "#f5f5f5",
-        "stack-gray-text": "#c0c5cc",
+        "stackup-dark": "#121212",
+        "stackup-gray": "#f5f5f5",
+        "stackup-gray-text": "#c0c5cc",
       },
       outlineWidth: {
         3: "3px",
