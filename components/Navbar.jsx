@@ -9,7 +9,7 @@ const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="text-black dark:text-white p-2 border-b border-stackup-gray dark:border-stackup-gray/10">
+    <nav className="sticky top-0 text-black dark:text-white bg-white dark:bg-stackup-dark p-2 border-b border-gray-20 dark:border-stackup-gray/30">
       <div className="flex justify-start items-center">
         <div className="flex cursor-pointer">
           <div className="pl-4 cursor-pointer">
