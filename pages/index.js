@@ -144,7 +144,6 @@ const Index = () => {
                 />
               </div>
             </li>
-            <hr className="border-1 mt-3 border-stackup-gray-text/10 dark:border-stackup-gray/10" />
           </ul>
         </div>
       </div>
