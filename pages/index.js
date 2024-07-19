@@ -104,7 +104,7 @@ const Index = () => {
         <hr className="w-3/4 border-1 p-3 border-stackup-gray-text/30 dark:border-stackup-gray/10" />
         <div className="w-full px-32 text-black dark:text-white mb-4">
           <div className="flex flex-row justify-between p-1">
-            <p className="font-semibold text-2xl">Check out more Projects</p>
+            <p className="font-medium text-2xl">Check out more Projects</p>
             <button className="mr-8 flex flex-row gap-2 border border-black dark:border-stackup-gray font-medium hover:bg-stackup-gray-text/70 dark:hover:bg-stackup-gray/40  p-2 rounded-lg">
               All Projects
               <IoMdArrowRoundForward className="text-2xl" />

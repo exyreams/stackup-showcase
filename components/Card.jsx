@@ -32,6 +32,7 @@ export function Card({ description, projectname, techstack, username }) {
           <p className="font-light text-sm text-gray-50 relative z-10 my-4">
             {description}
           </p>
+          
         </div>
       </div>
     </div>
