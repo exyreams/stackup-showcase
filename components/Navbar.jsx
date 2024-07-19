@@ -1,12 +1,22 @@
-import React from "react";
 import Image from "next/image";
-
 import { useTheme } from "next-themes";
 import { LuSun, LuMoonStar } from "react-icons/lu";
+import React, { useEffect, useState } from "react";
+
 import { showcase, menu } from "../assets";
 
 const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    setIsDark(resolvedTheme === "dark");
+  }, [resolvedTheme]);
+
+  const toggleTheme = () => {
+    setTheme(isDark ? "light" : "dark");
+    setIsDark(!isDark);
+  };
 
   return (
     <nav className="sticky top-0 z-20 text-black dark:text-white bg-white dark:bg-stackup-dark p-2 border-b border-gray-20 dark:border-stackup-gray/30">
@@ -33,16 +43,34 @@ const Navbar = () => {
           </ul>
           <div className="flex justify-start pr-15 px-6 py-3">
             <label className="inline-flex items-center relative mr-4">
-              <input className="peer hidden" id="toggle" type="checkbox" />
-              <div
-                className="relative w-[64px] h-[30px] bg-stackup-gray-text peer-checked:bg-stackup-gray-text rounded-full after:absolute after:content-[''] after:w-[24px] after:h-[24px] after:bg-gradient-to-r from-zinc-900 to-zinc-900 peer-checked:after:from-orange-500 peer-checked:after:to-yellow-400 after:rounded-full after:top-[3px] after:left-[3px] active:after:w-[30px] peer-checked:after:left-[60px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"
-                onClick={() => {
-                  setTheme(resolvedTheme === "light" ? "dark" : "light");
-                }}
+              <input
+                className="peer hidden"
+                id="toggle"
+                type="checkbox"
+                checked={isDark}
+                onChange={toggleTheme}
               />
-
-              <LuSun className="text-black fill-black opacity-60 peer-checked:opacity-100 peer-checked:fill-white peer-checked:text-white absolute w-4 h-4 right-[7px]" />
-              <LuMoonStar className=" text-white fill-white opacity-100 peer-checked:opacity-60 peer-checked:fill-black peer-checked:text-black absolute w-4 h-4 left-[7px]" />
+              <div
+                className={`relative w-[64px] h-[30px] ${
+                  isDark ? "bg-stackup-gray-text" : "bg-stackup-gray-text"
+                } rounded-full after:absolute after:content-[''] after:w-[24px] after:h-[24px] after:bg-gradient-to-r ${
+                  isDark
+                    ? " after:from-zinc-900 after:to-zinc-900"
+                    : "after:from-orange-500 after:to-yellow-400"
+                } after:rounded-full after:top-[3px] after:left-[3px] active:after:w-[30px] ${
+                  isDark ? "after:left-[60px] after:translate-x-[-100%]" : ""
+                } shadow-sm duration-300 after:duration-300 after:shadow-md`}
+              />
+              <LuSun
+                className={`text-black fill-black ${
+                  !isDark ? "opacity-100 text-white fill-white" : "opacity-50"
+                } absolute w-4 h-4 left-[7px]`}
+              />
+              <LuMoonStar
+                className={`text-black fill-white ${
+                  isDark ? "opacity-100  text-white fill-black" : "opacity-50"
+                } absolute w-4 h-4 right-[7px]`}
+              />
             </label>
             <Image
               src={menu}
