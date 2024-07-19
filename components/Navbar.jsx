@@ -46,7 +46,7 @@ const Navbar = () => {
             </label>
             <Image
               src={menu}
-              className="cursor-pointer dark:filter dark:brightness-150"
+              className="cursor-not-allowed dark:filter dark:brightness-150 "
               height={32}
               width={32}
             />
