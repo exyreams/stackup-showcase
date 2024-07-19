@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
-import { Card } from "../components/Card";
+import { Card, ScrollToTop } from "../components";
 
 const Index = () => {
   const [show, setShow] = useState(true);
@@ -147,6 +147,7 @@ const Index = () => {
           </ul>
         </div>
       </div>
+      <ScrollToTop />
     </div>
   );
 };

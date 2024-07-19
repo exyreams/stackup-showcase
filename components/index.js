@@ -1,7 +1,8 @@
+import { Card } from "./Card";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
 import Tooltips from "./Tootips";
-import { Card } from "./Card";
+import ScrollToTop from "./ScrollToTop";
 
-export { Navbar, Footer, Sidebar, Tooltips, Card };
+export { Card, Footer, Navbar, ScrollToTop, Sidebar, Tooltips };
