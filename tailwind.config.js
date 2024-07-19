@@ -10,8 +10,19 @@ module.exports = {
     extend: {
       colors: {
         "stackup-dark": "#121212",
+        "stackup-pink": "#7F3535",
         "stackup-gray": "#f5f5f5",
+        "stackup-showcase": "#5b16f2",
         "stackup-gray-text": "#c0c5cc",
+      },
+      animation: {
+        move: "move 5s linear infinite",
+      },
+      keyframes: {
+        move: {
+          "0%": { transform: "translateX(-200px)" },
+          "100%": { transform: "translateX(200px)" },
+        },
       },
       outlineWidth: {
         3: "3px",
@@ -20,6 +31,7 @@ module.exports = {
       },
       width: {
         215: "215px",
+        350: "350px",
         357: "357px",
         557: "557px",
       },
