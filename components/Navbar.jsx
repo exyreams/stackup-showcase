@@ -9,7 +9,7 @@ const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <nav className="sticky top-0 text-black dark:text-white bg-white dark:bg-stackup-dark p-2 border-b border-gray-20 dark:border-stackup-gray/30">
+    <nav className="sticky top-0 z-20 text-black dark:text-white bg-white dark:bg-stackup-dark p-2 border-b border-gray-20 dark:border-stackup-gray/30">
       <div className="flex justify-start items-center">
         <div className="flex cursor-pointer">
           <div className="pl-4 cursor-pointer">
@@ -35,18 +35,18 @@ const Navbar = () => {
             <label className="inline-flex items-center relative mr-4">
               <input className="peer hidden" id="toggle" type="checkbox" />
               <div
-                className="relative w-[64px] h-[30px] bg-stackup-gray-text peer-checked:bg-stackup-gray-text rounded-full after:absolute after:content-[''] after:w-[24px] after:h-[24px] after:bg-gradient-to-r from-orange-500 to-yellow-400 peer-checked:after:from-zinc-900 peer-checked:after:to-zinc-900 after:rounded-full after:top-[3px] after:left-[3px] active:after:w-[30px] peer-checked:after:left-[60px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"
+                className="relative w-[64px] h-[30px] bg-stackup-gray-text peer-checked:bg-stackup-gray-text rounded-full after:absolute after:content-[''] after:w-[24px] after:h-[24px] after:bg-gradient-to-r from-zinc-900 to-zinc-900 peer-checked:after:from-orange-500 peer-checked:after:to-yellow-400 after:rounded-full after:top-[3px] after:left-[3px] active:after:w-[30px] peer-checked:after:left-[60px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"
                 onClick={() => {
                   setTheme(resolvedTheme === "light" ? "dark" : "light");
                 }}
               />
 
-              <LuSun className="text-white fill-white opacity-100 peer-checked:opacity-60 peer-checked:fill-black peer-checked:text-black absolute w-4 h-4 left-[7px]" />
-              <LuMoonStar className="text-black fill-black opacity-60 peer-checked:opacity-100 peer-checked:fill-white peer-checked:text-white absolute w-4 h-4 right-[7px]" />
+              <LuSun className="text-black fill-black opacity-60 peer-checked:opacity-100 peer-checked:fill-white peer-checked:text-white absolute w-4 h-4 right-[7px]" />
+              <LuMoonStar className=" text-white fill-white opacity-100 peer-checked:opacity-60 peer-checked:fill-black peer-checked:text-black absolute w-4 h-4 left-[7px]" />
             </label>
             <Image
               src={menu}
-              className="cursor-pointer"
+              className="cursor-pointer dark:filter dark:brightness-150"
               height={32}
               width={32}
             />
