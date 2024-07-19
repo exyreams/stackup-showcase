@@ -32,7 +32,12 @@ const Sidebar = () => {
       <div className="mt-auto mb-2">
         <hr className="border-1 mb-2 dark:border-stackup-gray/10" />
         <div className="hover:bg-stackup-gray dark:hover:bg-stackup-gray/10 p-2 rounded-md cursor-pointer dark:fill-red">
-          <Image src={setting} height={32} width={32} className="svg-lighter" />
+          <Image
+            src={setting}
+            height={32}
+            width={32}
+            className="dark:filter dark:brightness-150"
+          />
         </div>
       </div>
     </div>
