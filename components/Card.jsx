@@ -1,7 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Image from "next/image";
-import { user } from "../assets/";
 import PropTypes from "prop-types";
+import { IoIosArrowForward } from "react-icons/io";
+
+import { user } from "../assets/";
 
 export function Card({ description, projectname, techstack, username }) {
   return (
@@ -17,7 +19,7 @@ export function Card({ description, projectname, techstack, username }) {
             className="h-10 w-10 rounded-full border-2 object-cover"
           />
           <div className="flex flex-col">
-            <p className="font-normal text-base text-gray-50 relative z-10">
+            <p className="font-normal text-base text-white relative z-10">
               {username}
             </p>
             <p className="text-sm text-white/90 dark:text-white/90 bg-white/20 px-1 rounded-sm">
@@ -32,7 +34,12 @@ export function Card({ description, projectname, techstack, username }) {
           <p className="font-light text-sm text-gray-50 relative z-10 my-4">
             {description}
           </p>
-          
+          <div className="mt-auto">
+            <button className="flex flex-row items-center text-gray-50 hover:text-white transition-colors duration-200 relative z-10 ml-auto">
+              View
+              <IoIosArrowForward className="ml-1" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
