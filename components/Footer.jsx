@@ -1,8 +1,10 @@
 import React from "react";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaDiscord, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className=" text-black dark:text-white p-6 border-t border-stackup-gray dark:border-stackup-gray/10">
+    <div className="flex flex-row justify-between  text-black dark:text-white p-6 border-t border-stackup-gray dark:border-stackup-gray/10">
       <div className="flex justify-start items-center">
         <p className="text-sm font-regular mr-4">© 2024 Earn by StackUp</p>
         <ul className="flex space-x-6">
@@ -30,6 +32,25 @@ const Footer = () => {
             <a href="https://stackup.dev/privacy/">Privacy Policy</a>
           </li>
         </ul>
+      </div>
+      <div className="flex space-x-4">
+        <a href="https://x.com/StackUpHQ/" target="_blank" rel="noreferrer">
+          <FaXTwitter className="text-2xl text-stackup-gray-text hover:text-stackup-scroll-top" />
+        </a>
+        <a
+          href="https://discord.com/invite/3x3h2z6A63/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaDiscord className="text-2xl text-stackup-gray-text hover:text-stackup-scroll-top" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/stackupofficial/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedinIn className="text-2xl text-stackup-gray-text hover:text-stackup-scroll-top" />
+        </a>
       </div>
     </div>
   );
