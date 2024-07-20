@@ -1,3 +1,4 @@
+
 /* eslint-disable react/react-in-jsx-scope */
 import Image from "next/image";
 import PropTypes from "prop-types";
@@ -7,10 +8,10 @@ import { user } from "../assets/";
 
 export function Card({ description, projectname, techstack, username }) {
   return (
-    <div className='w-350 group/card'>
-      <div className=" cursor-pointer overflow-hidden relative card h-96 rounded-md shadow-xl mx-auto backgroundImage flex flex-col justify-between p-4">
-        <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"></div>
-        <div className="flex flex-row items-center space-x-4 z-10">
+    <div className='group/card w-350'>
+      <div className=" card backgroundImage relative mx-auto flex h-96 cursor-pointer flex-col justify-between overflow-hidden rounded-md p-4 shadow-xl">
+        <div className="absolute left-0 top-0 h-full w-full opacity-60 transition duration-300 group-hover/card:bg-black"></div>
+        <div className="z-10 flex flex-row items-center space-x-4">
           <Image
             height="100"
             width="100"
@@ -19,23 +20,23 @@ export function Card({ description, projectname, techstack, username }) {
             className="h-10 w-10 rounded-full border-2 object-cover"
           />
           <div className="flex flex-col">
-            <p className="font-normal text-base text-white relative z-10">
+            <p className="relative z-10 text-base font-normal text-white">
               {username}
             </p>
-            <p className="text-sm text-white/90 dark:text-white/90 bg-white/20 px-1 rounded-sm">
+            <p className="rounded-sm bg-white/20 px-1 text-sm text-white/90 dark:text-white/90">
               {techstack}
             </p>
           </div>
         </div>
         <div className="text content">
-          <h1 className="font-normal text-xl md:text-2xl text-gray-50 relative z-10">
+          <h1 className="relative z-10 text-xl font-normal text-gray-50 md:text-2xl">
             {projectname}
           </h1>
-          <p className="font-light text-sm text-gray-50 relative z-10 my-4">
+          <p className="relative z-10 my-4 text-sm font-light text-gray-50">
             {description}
           </p>
           <div className="mt-auto">
-            <button className="flex flex-row items-center text-gray-50 hover:text-white transition-colors duration-200 relative z-10 ml-auto">
+            <button className="relative z-10 ml-auto flex flex-row items-center text-gray-50 transition-colors duration-200 hover:text-white">
               View
               <IoIosArrowForward className="ml-1" />
             </button>

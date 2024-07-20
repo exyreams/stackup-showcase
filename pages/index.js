@@ -11,23 +11,23 @@ const Index = () => {
     <div className="flex flex-col">
       {/* Welcome Message */}
       <div className="bg-stackup-gray dark:bg-stackup-gray/10">
-        <div className="flex flex-col gap-y-4 mx-5 sm:mx-20 lg:mx-28 py-10">
-          <h1 className="text-black dark:text-white text-2xl md:text-2xl font-semibold">
+        <div className="mx-5 flex flex-col gap-y-4 py-10 lg:mx-28 sm:mx-20">
+          <h1 className="text-2xl font-semibold text-black dark:text-white md:text-2xl">
             🚀 Welcome back,&nbsp;
             <span className="text-stackup-showcase">exyreams!</span>
           </h1>
         </div>
       </div>
 
-      <div className="flex flex-col items-center mt-10 gap-y-9 mx-5 sm:mx-8 md:mx-9 xl:mx-auto pt-5 pb-14 sm:px-20 lg:px-0">
-        <div className="flex flex-col justify-start text-black dark:text-white px-32 mb-10">
+      <div className="xl:mx-auto mx-5 mt-10 flex flex-col items-center gap-y-9 pb-14 pt-5 lg:px-0 md:mx-9 sm:mx-8 sm:px-20">
+        <div className="mb-10 flex flex-col justify-start px-32 text-black dark:text-white">
           {/* Announcements */}
-          <div className="cursor-pointer p-5 bg-stackup-gray dark:bg-stackup-gray/10 rounded-2xl">
+          <div className="cursor-pointer rounded-2xl bg-stackup-gray p-5 dark:bg-stackup-gray/10">
             <div
               className="flex justify-between"
               onClick={() => setShow(!show)}
             >
-              <h2 className="font-medium text-lg">
+              <h2 className="text-lg font-medium">
                 📢 New: Monthly Happenings Calendar
               </h2>
               <FaChevronDown
@@ -44,7 +44,7 @@ const Index = () => {
                   href="https://go.stackup.dev/monthly-happenings-july"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover:cursor-pointer hover:underline text-stackup-pink"
+                  className="text-stackup-pink hover:cursor-pointer hover:underline"
                 >
                   Monthly Happenings Calendar
                 </a>
@@ -53,22 +53,22 @@ const Index = () => {
               </p>
             </div>
             <div>
-              <p className="text-xs dark:text-stackup-gray/40 text-black/40 font-normal">
+              <p className="text-xs font-normal text-black/40 dark:text-stackup-gray/40">
                 <time dateTime="2024-07-04T23:15:35+05:45">Jul 04, 2024</time>
               </p>
             </div>
           </div>
         </div>
-        {/* Featured Text*/}
+        {/* Featured Text */}
         <div className="flex flex-col items-center space-y-1 text-black dark:text-white">
-          <h2 className="font-semibold text-4xl">Featured Projects</h2>
+          <h2 className="text-4xl font-semibold">Featured Projects</h2>
           <p className="text-sm">
             All times are shown in&nbsp;
             <b>your timezone (GMT +05:45)</b>
           </p>
         </div>
         {/* Feature projects */}
-        <ul className="flex flex-row flex-wrap gap-8 items-center p-5">
+        <ul className="flex flex-row flex-wrap items-center gap-8 p-5">
           <li>
             <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/l8/wallhaven-l8vp7y.jpg)] bg-cover bg-center">
               <Card
@@ -101,11 +101,11 @@ const Index = () => {
           </li>
           <hr className="border-1 mt-3 border-stackup-gray-text/10 dark:border-stackup-gray/10" />
         </ul>
-        <hr className="w-3/4 border-1 p-3 border-stackup-gray-text/30 dark:border-stackup-gray/10" />
-        <div className="w-full px-32 text-black dark:text-white mb-4">
+        <hr className="border-1 w-3/4 border-stackup-gray-text/30 p-3 dark:border-stackup-gray/10" />
+        <div className="mb-4 w-full px-32 text-black dark:text-white">
           <div className="flex flex-row justify-between p-1">
-            <p className="font-medium text-2xl">Check out more Projects</p>
-            <button className="mr-8 flex flex-row gap-2 border border-black dark:border-stackup-gray font-medium hover:bg-stackup-gray-text/70 dark:hover:bg-stackup-gray/40  p-2 rounded-lg">
+            <p className="text-2xl font-medium">Check out more Projects</p>
+            <button className="mr-8 flex flex-row gap-2 rounded-lg border border-black p-2 font-medium hover:bg-stackup-gray-text/70  dark:border-stackup-gray dark:hover:bg-stackup-gray/40">
               All Projects
               <IoMdArrowRoundForward className="text-2xl" />
             </button>
@@ -113,7 +113,7 @@ const Index = () => {
         </div>
         {/* More Projects */}
         <div className="mt-4">
-          <ul className="flex flex-row flex-wrap gap-8 items-center">
+          <ul className="flex flex-row flex-wrap items-center gap-8">
             <li>
               <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/7p/wallhaven-7p1qo9.png)] bg-cover bg-center">
                 <Card

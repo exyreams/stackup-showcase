@@ -12,6 +12,8 @@
       {
         "officialSorting": true
       }
-    ]
+    ],
+    "tailwindcss/enforces-shorthand": "off",
+    "tailwindcss/no-custom-classname": "off"
   }
 }

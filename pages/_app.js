@@ -12,7 +12,7 @@ import { Footer, Navbar, Sidebar } from "../components"; // Adjusted imports
 
 const Showcase = ({ Component, pageProps }) => (
   <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
-    <div className="font-poppins bg-white dark:bg-stackup-dark min-h-screen">
+    <div className="min-h-screen bg-white font-poppins dark:bg-stackup-dark">
       <Head>
         <link rel="icon" type="image/ico" href="/favicon.ico" />
         <link rel="manifest" href="/site.webmanifest" />
@@ -21,9 +21,9 @@ const Showcase = ({ Component, pageProps }) => (
 
       <div className="flex">
         <Sidebar />
-        <div className="flex-1 flex flex-col">
+        <div className="flex flex-1 flex-col">
           <Navbar />
-          <div className="flex-grow">
+          <div className="grow">
             <Component {...pageProps} />
           </div>
           <Footer />

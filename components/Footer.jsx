@@ -4,9 +4,9 @@ import { FaDiscord, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex flex-row justify-between  text-black dark:text-white p-6 border-t border-stackup-gray dark:border-stackup-gray/10">
-      <div className="flex justify-start items-center">
-        <p className="text-sm font-regular mr-4">© 2024 Earn by StackUp</p>
+    <div className="flex flex-row justify-between  border-t border-stackup-gray p-6 text-black dark:border-stackup-gray/10 dark:text-white">
+      <div className="flex items-center justify-start">
+        <p className="font-regular mr-4 text-sm">© 2024 Earn by StackUp</p>
         <ul className="flex space-x-6">
           <li className="font-semibold hover:underline">
             <a

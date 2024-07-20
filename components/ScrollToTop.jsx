@@ -30,11 +30,11 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="flex fixed bottom-24 right-10 bg-stackup-scroll-top hover:bg-stackup-scroll-dark/60 dark:bg-stackup-highlight-dark dark:hover:bg-stackup-highlight-dark/50  text-white font-semibold dark:text-white p-3 rounded-lg shadow-lg transition-all duration-300 z-50"
+          className="fixed bottom-24 right-10 z-50 flex rounded-lg bg-stackup-scroll-top p-3  font-semibold text-white shadow-lg transition-all duration-300 hover:bg-stackup-scroll-dark/60 dark:bg-stackup-highlight-dark dark:text-white dark:hover:bg-stackup-highlight-dark/50"
           aria-label="Scroll to top"
         >
           Top
-          <IoIosArrowUp className="ml-2 text-lg w-6 h-6" />
+          <IoIosArrowUp className="ml-2 h-6 w-6 text-lg" />
         </button>
       )}
     </>
