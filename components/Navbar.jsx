@@ -1,6 +1,8 @@
 /* eslint-disable tailwindcss/no-unnecessary-arbitrary-value */
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { LuSun, LuMoonStar } from "react-icons/lu";
 import React, { useEffect, useState } from "react";
 
@@ -9,6 +11,7 @@ import { showcase, menu } from "../assets";
 const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const [isDark, setIsDark] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsDark(resolvedTheme === "dark");
@@ -24,22 +27,25 @@ const Navbar = () => {
       <div className="flex items-center justify-start">
         <div className="flex cursor-pointer">
           <div className="cursor-pointer pl-4">
-            <Image src={showcase} height={48} width={48} alt="logo"/>
+            <Image src={showcase} height={48} width={48} alt="logo" />
           </div>
-          <div className="ml-2 font-medium text-stackup-gray-text">
-            <p className="text-md  -mb-1 font-bold text-black dark:text-white">
-              Showcase
-            </p>
-            By StackUp
-          </div>
+          <Link href="/">
+            <div className="ml-2 cursor-pointer font-medium text-stackup-gray-text">
+              <p className="text-md  -mb-1 font-bold text-black dark:text-white">
+                Showcase
+              </p>
+              By StackUp
+            </div>
+          </Link>
         </div>
         <div className="flex grow items-center justify-between pl-3">
           <ul className="flex space-x-2">
             <li className="cursor-pointer rounded-full px-6  py-3 hover:bg-stackup-gray dark:hover:bg-stackup-gray/10">
-              <a href="#">Home</a>
+              {/* <a href="#">Home</a> */}
+              <button onClick={() => router.push("/")}>Home</button>
             </li>
             <li className="cursor-pointer rounded-full px-6  py-3 hover:bg-stackup-gray dark:hover:bg-stackup-gray/10">
-              <a href="#">Explore</a>
+              <button onClick={() => router.push("/explore")}>Explore</button>
             </li>
           </ul>
           <div className="pr-15 flex justify-start px-6 py-3">
