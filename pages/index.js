@@ -70,7 +70,7 @@ const Index = () => {
         {/* Feature projects */}
         <ul className="flex flex-row flex-wrap items-center gap-8 p-5">
           <li>
-            <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/l8/wallhaven-l8vp7y.jpg)] bg-cover bg-center">
+            <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/vector-abstract-3d-room-with-luxury-cylinder-stand-podium_8829-2843.jpg?t=st=1721495095~exp=1721498695~hmac=e7107d2ea6f3aab9e84b29fa72f15df002729cf960d98476244c8a9c87dd08b4&w=360)] bg-cover bg-center">
               <Card
                 username="exyreams"
                 techstack="React, Tailwind"
@@ -80,17 +80,17 @@ const Index = () => {
             </div>
           </li>
           <li>
-            <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/ex/wallhaven-exrqrr.jpg)] bg-cover bg-center">
+            <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/postponed-concept-illustrated_23-2148500731.jpg?t=st=1721490799~exp=1721494399~hmac=41be28daf3a7ee94bba2f81b8b29acf4f16dfbdcd05d9f1f653a539cbc555449&w=740)] bg-cover bg-center">
               <Card
                 username="exyness"
-                techstack="React, Truffle, IPFS"
-                projectname="Decentralized Marketplace"
-                description="A peer-to-peer marketplace leveraging blockchain for transparent and trustless transactions."
+                techstack="React, Node.js, MongoDB"
+                projectname="TaskMaster"
+                description="A full-stack task management application with real-time updates and collaborative features."
               />
             </div>
           </li>
           <li>
-            <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/85/wallhaven-8586my.png)] bg-cover ">
+            <div className="rounded-md bg-[url(https://cdn.prod.website-files.com/66471164df475246e95ef459/66471164df475246e95ef579_crypto-wallets.png)] bg-cover ">
               <Card
                 username="kronos"
                 techstack="Solidity, Web3.js, Ethereum"
@@ -115,7 +115,7 @@ const Index = () => {
         <div className="mt-4">
           <ul className="flex flex-row flex-wrap items-center gap-8">
             <li>
-              <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/7p/wallhaven-7p1qo9.png)] bg-cover bg-center">
+              <div className="rounded-md bg-[url(https://t3.ftcdn.net/jpg/06/55/48/22/360_F_655482254_1k1yrQACCvforJsBqcLgQgJAuoPSzg3X.jpg)] bg-cover bg-center">
                 <Card
                   username="flynk"
                   techstack="Next.js, GraphQL, PostgreSQL"
@@ -125,17 +125,17 @@ const Index = () => {
               </div>
             </li>
             <li>
-              <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/o5/wallhaven-o5vx37.jpg)] bg-cover bg-center">
+              <div className="rounded-md bg-[url(https://cdn.dribbble.com/userupload/5354762/file/original-b037bbe3dc40560e83a3ffddc57b7b32.png?resize=400x0)] bg-center bg-cover">
                 <Card
                   username="zorvi"
-                  techstack="Vue.js, Firebase, Tailwind CSS"
-                  projectname="EduPro"
-                  description="An e-learning platform offering interactive courses, quizzes, and community support for learners."
+                  techstack="Vue.js, Firebase, TensorFlow.js"
+                  projectname="SmartSnap"
+                  description="An AI-powered photo editing app that suggests enhancements and applies filters using machine learning."
                 />
               </div>
             </li>
             <li>
-              <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/xl/wallhaven-xl952z.jpg)] bg-cover bg-center">
+              <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/fitness-mobile-app-infographic-template_23-2148251135.jpg?t=st=1721492247~exp=1721495847~hmac=4d4d43a1cfc5308b23c57615950cc2d8608e21a6375af2cade8835bcb01d827b&w=740)] bg-contain bg-center">
                 <Card
                   username="bilph"
                   techstack="React, Node.js, MongoDB"

@@ -42,7 +42,7 @@ const Explore = () => {
         </div>
         <ul className="gird mx-auto flex grid-cols-2 flex-row flex-wrap items-center justify-between gap-12">
           <li>
-            <div className="rounded-md bg-[url(https://w.wallhaven.cc/full/l8/wallhaven-l8vp7y.jpg)] bg-cover bg-center">
+            <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/vector-abstract-3d-room-with-luxury-cylinder-stand-podium_8829-2843.jpg?t=st=1721495095~exp=1721498695~hmac=e7107d2ea6f3aab9e84b29fa72f15df002729cf960d98476244c8a9c87dd08b4&w=360)] bg-cover bg-center">
               <Card
                 username="exyreams"
                 techstack="React, Tailwind"
