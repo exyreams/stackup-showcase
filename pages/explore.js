@@ -2,21 +2,23 @@ import React from "react";
 import { BsInfoCircle } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
 
+import { banner } from "../assets";
 import { Card, ScrollToTop } from "../components";
 
 const Explore = () => {
   return (
     <div>
       <div className="flex flex-col">
-        <div className="bg-stackup-gray dark:bg-stackup-gray/10">
-          <div className="mx-5 flex flex-col pb-16 pt-12 lg:mx-28 md:mx-10 sm:mx-8">
-            <p className="text-lg font-semibold text-black/40 dark:text-white/40">
-              Showcase
-            </p>
-            <h1 className="mt-2 text-5xl font-semibold text-black dark:text-white md:text-6xl sm:text-5xl">
+        <div
+          className="bg-cover"
+          style={{ backgroundImage: `url(${banner.src})` }}
+        >
+          <div className="mx-5 flex flex-col pb-16 pt-12 text-white lg:mx-28 md:mx-10 sm:mx-8">
+            <p className="text-lg font-semibold text-white/70">Showcase</p>
+            <h1 className="mt-2 text-5xl font-semibold md:text-6xl sm:text-5xl">
               Projects
             </h1>
-            <p className="text-md mt-6 max-w-xl text-black/80 dark:text-white/70 md:text-lg sm:text-base">
+            <p className="text-md mt-6 max-w-xl text-white/85 md:text-lg sm:text-base">
               Showcase and share your projects, receive feedback, help, or
               insights from other users in the community as you expand your
               developer portfolio and improve your skills.
