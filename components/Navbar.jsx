@@ -40,12 +40,17 @@ const Navbar = () => {
         </div>
         <div className="flex grow items-center justify-between pl-3">
           <ul className="flex space-x-2">
-            <li className="cursor-pointer rounded-full px-6  py-3 hover:bg-stackup-gray dark:hover:bg-stackup-gray/10">
-              {/* <a href="#">Home</a> */}
-              <button onClick={() => router.push("/")}>Home</button>
+            <li
+              className={`cursor-pointer rounded-full px-6 py-3 ${router.pathname !== "/" ? "border-2 border-transparent hover:border-stackup-gray dark:hover:border-stackup-gray/50" : ""} ${router.pathname === "/" ? "bg-stackup-gray dark:bg-stackup-gray/10" : ""}`}
+              key="home"
+            >
+              <Link href="/">Home</Link>
             </li>
-            <li className="cursor-pointer rounded-full px-6  py-3 hover:bg-stackup-gray dark:hover:bg-stackup-gray/10">
-              <button onClick={() => router.push("/explore")}>Explore</button>
+            <li
+              className={`cursor-pointer rounded-full px-6 py-3 ${router.pathname !== "/explore" ? "border-2 border-transparent hover:border-stackup-gray dark:hover:border-stackup-gray/50" : ""} ${router.pathname === "/explore" ? "bg-stackup-gray dark:bg-stackup-gray/10" : ""}`}
+              key="explore"
+            >
+              <Link href="/explore">Explore</Link>
             </li>
           </ul>
           <div className="pr-15 flex justify-start px-6 py-3">
