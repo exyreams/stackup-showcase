@@ -25,11 +25,11 @@ const Navbar = () => {
   return (
     <nav className="border-gray-20 sticky top-0 z-20 border-b bg-white p-2 text-black dark:border-stackup-gray/30 dark:bg-stackup-dark dark:text-white">
       <div className="flex items-center justify-start">
-        <div className="flex cursor-pointer">
-          <div className="cursor-pointer pl-4">
-            <Image src={showcase} height={48} width={48} alt="logo" />
-          </div>
-          <Link href="/">
+        <div className="cursor-pointer">
+          <Link href="/" className="flex">
+            <div className="cursor-pointer pl-4">
+              <Image src={showcase} height={48} width={48} alt="logo" />
+            </div>
             <div className="ml-2 cursor-pointer font-medium text-stackup-gray-text">
               <p className="text-md  -mb-1 font-bold text-black dark:text-white">
                 Showcase
