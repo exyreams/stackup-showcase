@@ -28,13 +28,13 @@ const Navbar = () => {
         <div className="cursor-pointer">
           <Link href="/" className="flex">
             <div className="cursor-pointer pl-4">
-              <Image src={showcase} height={48} width={48} alt="logo" />
+              <Image src={showcase} height={40} width={40} alt="logo" />
             </div>
             <div className="ml-2 cursor-pointer font-medium text-stackup-gray-text">
-              <p className="text-md  -mb-1 font-bold text-black dark:text-white">
+              <p className="text-md -mb-1 font-bold text-black dark:text-white">
                 Showcase
               </p>
-              By StackUp
+              <h1 className="text-sm">By StackUp</h1>
             </div>
           </Link>
         </div>
