@@ -17,9 +17,9 @@ const Explore = () => {
               Projects
             </h1>
             <p className="text-md mt-6 max-w-xl text-black/80 dark:text-white/70 md:text-lg sm:text-base">
-              Showcase your projects, receive feedback from other users, and
-              help from the community as you expand your developer portfolio.
-              Share your work and get valuable insights to improve your skills.
+              Showcase and share your projects, receive feedback, help, or
+              insights from other users in the community as you expand your
+              developer portfolio and improve your skills.
             </p>
           </div>
         </div>
