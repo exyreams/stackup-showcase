@@ -6,5 +6,16 @@ import learn from "./learn.svg";
 import setting from "./setting.svg";
 import showcase from "./showcase.svg";
 import banner from "./banner.svg";
+import showcaseCover from "./showcase-cover.png";
 
-export { banner, earn, learn, logo, menu, setting, showcase, user };
+export {
+  banner,
+  earn,
+  learn,
+  logo,
+  menu,
+  setting,
+  showcase,
+  showcaseCover,
+  user,
+};
