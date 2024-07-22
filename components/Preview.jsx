@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/cjs/styles/prism";
@@ -9,6 +10,7 @@ const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 const Preview = ({
   projectName,
+  coverImage,
   repositoryLink,
   selectedTechStacks,
   description,
@@ -46,7 +48,7 @@ const Preview = ({
             <ReactQuill
               value={part}
               readOnly={true}
-              theme="bubble"
+              theme="snow"
               modules={{ toolbar: false }}
             />
           </div>
@@ -63,12 +65,20 @@ const Preview = ({
       <div className="space-y-4">
         <div>
           <h3 className="text-md font-semibold text-black dark:text-white">
-            Project Name
-          </h3>
-          <p className="break-words text-sm text-black dark:text-white">
             {projectName}
-          </p>
+          </h3>
         </div>
+        {coverImage && (
+          <div className="relative mt-2 h-64 w-full">
+            <Image
+              src={coverImage}
+              alt="Project Cover"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-lg"
+            />
+          </div>
+        )}
         <div>
           <h3 className="text-md font-semibold text-black dark:text-white">
             Repository Link
@@ -101,9 +111,9 @@ const Preview = ({
         </div>
         <div>
           <h3 className="text-md font-semibold text-black dark:text-white">
-            Project Description
+            Description
           </h3>
-          <div className="mt-2 overflow-hidden break-words rounded border border-gray-300 p-4 text-sm text-black dark:text-white">
+          <div className="mt-2 overflow-hidden break-words rounded bg-stackup-gray-text/80 p-3 dark:text-black">
             {renderDescription()}
           </div>
         </div>
