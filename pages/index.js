@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -66,6 +67,12 @@ const Index = () => {
             All times are shown in&nbsp;
             <b>your timezone (GMT +05:45)</b>
           </p>
+          <Link
+            href="/submit"
+            className="mt-3 text-lg font-semibold text-black underline dark:text-white"
+          >
+            Submit Project
+          </Link>
         </div>
         {/* Feature projects */}
         <ul className="flex flex-row flex-wrap items-center gap-8 p-5">
@@ -105,10 +112,12 @@ const Index = () => {
         <div className="mb-4 w-full px-32 text-black dark:text-white">
           <div className="flex flex-row justify-between p-1">
             <p className="text-2xl font-medium">Check out more Projects</p>
-            <button className="mr-8 flex flex-row gap-2 rounded-lg border border-black p-2 font-medium hover:bg-stackup-gray-text/70  dark:border-stackup-gray dark:hover:bg-stackup-gray/40">
-              All Projects
-              <IoMdArrowRoundForward className="text-2xl" />
-            </button>
+            <Link href="/explore">
+              <button className="mr-8 flex flex-row gap-2 rounded-lg border border-black p-2 font-medium hover:bg-stackup-gray-text/70  dark:border-stackup-gray dark:hover:bg-stackup-gray/40">
+                All Projects
+                <IoMdArrowRoundForward className="text-2xl" />
+              </button>
+            </Link>
           </div>
         </div>
         {/* More Projects */}
