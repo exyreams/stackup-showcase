@@ -31,7 +31,7 @@ const Navbar = () => {
               <Image src={showcase} height={40} width={40} alt="logo" />
             </div>
             <div className="ml-2 cursor-pointer font-medium text-stackup-gray-text">
-              <p className="text-md -mb-1 font-bold text-black dark:text-white">
+              <p className="text-md -mb-1 font-bold text-stackup-showcase">
                 Showcase
               </p>
               <h1 className="text-sm">By StackUp</h1>
