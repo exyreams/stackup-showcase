@@ -17,6 +17,7 @@ module.exports = {
         "stackup-highlight-dark": "#292929",
         "stackup-showcase": "#5b16f2",
         "stackup-gray-text": "#c0c5cc",
+        "stackup-placeholder": "rgb(86, 86, 87, 0.7)",
       },
       animation: {
         move: "move 5s linear infinite",
