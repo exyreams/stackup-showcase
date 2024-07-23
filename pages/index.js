@@ -67,12 +67,6 @@ const Index = () => {
             All times are shown in&nbsp;
             <b>your timezone (GMT +05:45)</b>
           </p>
-          <Link
-            href="/submit"
-            className="mt-3 text-lg font-semibold text-black underline dark:text-white"
-          >
-            Submit Project
-          </Link>
         </div>
         {/* Feature projects */}
         <ul className="flex flex-row flex-wrap items-center gap-8 p-5">

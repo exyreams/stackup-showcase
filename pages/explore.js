@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { BsInfoCircle } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
@@ -33,12 +32,6 @@ const Explore = () => {
           <h2 className="mb-4 text-xl font-semibold text-black/70 dark:text-white/70">
             Ongoing Featured Projects
           </h2>
-          <Link
-            href="/submit"
-            className="text-2xl font-semibold text-red-500 hover:underline"
-          >
-            Submit Project
-          </Link>
         </div>
         <div className="mb-8 flex flex-row justify-between rounded-lg bg-stackup-gray p-5 dark:bg-stackup-gray/10">
           <p className="flex text-sm font-light text-black dark:text-white">
