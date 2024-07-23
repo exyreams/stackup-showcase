@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Image from "next/image";
-// import Link from "next/link";
+import Link from "next/link";
 import PropTypes from "prop-types";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -36,16 +36,12 @@ export function Card({ description, projectname, techstack, username }) {
             {description}
           </p>
           <div className="mt-auto">
-            {/* <Link href={href}>
+            <Link href="/showcase">
               <button className="relative z-10 ml-auto flex flex-row items-center text-gray-50 transition-colors duration-200 hover:text-white">
                 View
                 <IoIosArrowForward className="ml-1" />
               </button>
-            </Link> */}
-            <button className="relative z-10 ml-auto flex flex-row items-center text-gray-50 transition-colors duration-200 hover:text-white">
-              View
-              <IoIosArrowForward className="ml-1" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

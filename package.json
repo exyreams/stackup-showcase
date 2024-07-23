@@ -28,7 +28,8 @@
     "react-markdown": "^9.0.1",
     "react-quill": "^2.0.0",
     "react-select": "^5.8.0",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@eslint/compat": "^1.1.1",
