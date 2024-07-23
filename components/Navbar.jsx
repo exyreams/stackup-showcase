@@ -7,6 +7,7 @@ import { LuSun, LuMoonStar } from "react-icons/lu";
 import React, { useEffect, useState } from "react";
 
 import { showcase, menu } from "../assets";
+import Button from "./Button";
 
 const Navbar = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -84,9 +85,12 @@ const Navbar = () => {
                 } absolute right-[7px] h-4 w-4`}
               />
             </label>
+            <Link href="/submit">
+              <Button btnName="Submit Project" />
+            </Link>
             <Image
               src={menu}
-              className="cursor-not-allowed dark:brightness-150"
+              className="ml-3 cursor-not-allowed dark:brightness-150"
               height={32}
               width={32}
               alt="menu"
