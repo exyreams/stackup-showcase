@@ -8,10 +8,10 @@ import { ThemeProvider } from "next-themes";
 
 import "../styles/globals.css";
 
-import { Footer, Navbar, Sidebar } from "../components"; // Adjusted imports
+import { Footer, Navbar, Sidebar } from "../components";
 
 const Showcase = ({ Component, pageProps }) => (
-  <ThemeProvider defaultTheme="system" attribute="class" enableSystem={true}>
+  <ThemeProvider defaultTheme="light" attribute="class" enableSystem={true}>
     <div className="min-h-screen bg-white font-poppins dark:bg-stackup-dark">
       <Head>
         <link rel="icon" type="image/ico" href="/favicon.ico" />
