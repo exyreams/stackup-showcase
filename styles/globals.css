@@ -7,6 +7,10 @@
   width: 8px;
 }
 
+.poppins-font {
+  font-family: "Poppins", sans-serif;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: #5b16f2;
   border-radius: 6px;
