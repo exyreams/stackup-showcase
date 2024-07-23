@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import "react-quill/dist/quill.snow.css";
 
-import { Button, Comments, Countdown } from "../components";
+import { Button, Comments, Countdown, Codeblock } from "../components";
 import { showcaseCover, user } from "../assets";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
@@ -14,6 +14,178 @@ const Showcase = () => {
   const [editedComment, setEditedComment] = useState("");
 
   const username = "exyreams";
+
+  const countdownblock = `import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+const COUNTDOWN_FROM = "12/31/2024";
+
+const SECOND = 1000;
+const MINUTE = SECOND * 60;
+const HOUR = MINUTE * 60;
+const DAY = HOUR * 24;
+
+const Countdown = () => {
+  const intervalRef = useRef(null);
+
+  const [remaining, setRemaining] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  const handleCountdown = () => {
+    const end = new Date(COUNTDOWN_FROM);
+
+    const now = new Date();
+
+    const distance = +end - +now;
+
+    const days = Math.floor(distance / DAY);
+    const hours = Math.floor((distance % DAY) / HOUR);
+    const minutes = Math.floor((distance % HOUR) / MINUTE);
+    const seconds = Math.floor((distance % MINUTE) / SECOND);
+
+    setRemaining({
+      days,
+      hours,
+      minutes,
+      seconds,
+    });
+  };
+
+  useEffect(() => {
+    intervalRef.current = setInterval(handleCountdown, 1000);
+
+    return () => clearInterval(intervalRef.current || undefined);
+  }, []);
+
+  return (
+    <div className="rounded-md bg-stackup-gray p-4 dark:bg-stackup-gray-text/80">
+      <div className="mx-auto flex w-full max-w-5xl items-center divide-x-2">
+        <CountdownItem num={remaining.days} text="days" />
+        <CountdownItem num={remaining.hours} text="hours" />
+        <CountdownItem num={remaining.minutes} text="minutes" />
+        <CountdownItem num={remaining.seconds} text="seconds" />
+      </div>
+    </div>
+  );
+};
+
+const CountdownItem = ({ num, text }) => (
+  <div className="flex h-24 w-1/4 flex-col items-center justify-center gap-1 border-stackup-gray-text/80 md:h-36 md:gap-2">
+    <div className="relative w-full overflow-hidden text-center">
+      <AnimatePresence mode="popLayout">
+        <motion.span
+          key={num}
+          initial={{ y: "100%" }}
+          animate={{ y: "0%" }}
+          exit={{ y: "-100%" }}
+          transition={{ ease: "backIn", duration: 0.75 }}
+          className="xl:text-7xl block text-2xl font-medium text-black lg:text-6xl md:text-4xl"
+        >
+          {num}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+    <span className="text-xs font-light text-black lg:text-base md:text-sm">
+      {text}
+    </span>
+  </div>
+);
+
+export default Countdown;
+`;
+
+  const commentsection = `import Image from "next/image";
+    import dynamic from "next/dynamic";
+    import { FaEdit, FaTrash } from "react-icons/fa";
+    import "react-quill/dist/quill.bubble.css";
+
+    const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
+
+    const Comments = ({
+      userIcon,
+      username,
+      comment,
+      index,
+      onEdit,
+      onDelete,
+      currentUser,
+    }) => {
+      return (
+        <div className="mb-4 flex items-start space-x-4">
+          <Image
+            src={userIcon}
+            alt={username}
+            width={40}
+            height={40}
+            className="rounded-full"
+          />
+          <div className="grow">
+            <div className="flex justify-between">
+              <p className="font-semibold text-black dark:text-white">{username}</p>
+              {currentUser === username && (
+                <div className="flex space-x-2">
+                  <button onClick={() => onEdit(index)}>
+                    <FaEdit className="text-blue-500 transition-colors hover:text-blue-700" />
+                  </button>
+                  <button onClick={() => onDelete(index)}>
+                    <FaTrash className="text-red-500 transition-colors hover:text-red-700" />
+                  </button>
+                </div>
+              )}
+            </div>
+            <div className="mt-2 rounded-lg border border-gray-300 bg-stackup-gray-text/80 p-4 dark:border-gray-700">
+              <ReactQuill
+                value={comment}
+                readOnly={true}
+                theme="bubble"
+                modules={{ toolbar: false }}
+                className="poppins-font"
+              />
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    export default Comments;
+    `;
+
+  const tootipscodeblock = `/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/prop-types */
+import Tooltip from "@mui/material/Tooltip";
+import { Zoom } from "@mui/material";
+
+const Tooltips = ({ title, placement, enterDelay, leaveDelay, children }) => (
+  <Tooltip
+    title={
+      <span className="p-2 font-poppins text-base font-medium">{title}</span>
+    }
+    arrow
+    enterDelay={enterDelay}
+    leaveDelay={leaveDelay}
+    placement={placement}
+    TransitionComponent={Zoom}
+    PopperProps={{
+      sx: {
+        "& .MuiTooltip-tooltip": {
+          backgroundColor: "#262626",
+        },
+        "& .MuiTooltip-arrow": {
+          color: "#262626",
+        },
+      },
+    }}
+  >
+    {children}
+  </Tooltip>
+);
+
+export default Tooltips;
+`;
 
   return (
     <div className="flex min-h-screen items-center justify-center">
@@ -54,7 +226,7 @@ const Showcase = () => {
               Tech Stacks
             </h3>
             <ul className="mr-4 flex list-disc flex-row flex-wrap pl-10 text-sm text-black dark:text-white">
-              <ul class="grid list-disc grid-cols-5 gap-4 pl-0 pr-0 font-semibold">
+              <ul className="grid list-disc grid-cols-5 gap-4 pl-0 pr-0 font-semibold">
                 <li>Git</li>
                 <li>HTML</li>
                 <li>JavaScript</li>
@@ -66,6 +238,10 @@ const Showcase = () => {
               </ul>
             </ul>
           </div>
+          <p className="rounded-md bg-stackup-gray-text/80 p-2 dark:text-black">
+            <span className="font-semibold text-red-600">Note:</span> AI was
+            used to generated some descriptions.
+          </p>
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-black dark:text-white">
               Overview
@@ -77,6 +253,7 @@ const Showcase = () => {
               developer portfolio and enhancing your skills.
             </p>
           </div>
+
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-black dark:text-white">
               Features
@@ -178,6 +355,35 @@ const Showcase = () => {
           </div>
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-black dark:text-white">
+              The Countdown Implementation
+            </h2>
+            <Codeblock code={countdownblock} />
+          </div>
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold text-black dark:text-white">
+              The Cool Tooltip Implementation
+            </h2>
+            <Codeblock code={tootipscodeblock} />
+          </div>
+
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold text-black dark:text-white">
+              The Comment Sections Implementation
+            </h2>
+            <p>
+              This part took me most of the time creating in the whole project.
+              But I really enjoyed creating it. I hope you enjoy it too.
+            </p>
+            <Codeblock code={commentsection} />
+            <p className="mt-4 text-black dark:text-white">
+              Showcase is more than just a platform; It&#39;s a community of
+              developers who are passionate about learning, growing, and
+              collaborating. Join us today and start showcasing your projects,
+              seeking feedback, and improving your skills.
+            </p>
+          </div>
+          <div className="mt-8">
+            <h2 className="text-2xl font-bold text-black dark:text-white">
               Join the Community
             </h2>
             <p className="mt-4 text-black dark:text-white">
@@ -188,8 +394,8 @@ const Showcase = () => {
             </p>
           </div>
           <p className="rounded-md bg-stackup-gray-text/80 p-2 italic dark:text-black">
-            <span className="font-semibold text-red-600">Note:</span> Text used
-            in the articles are generated by AI.
+            <span className="font-semibold text-red-600">Note:</span> AI was
+            used to generated some descriptions.
           </p>
 
           <div className="mt-8">
@@ -253,6 +459,25 @@ const Showcase = () => {
                   }}
                   classStyles="mt-4 mb-4"
                 />
+              </div>
+            </div>
+            <div className="mb-5 flex items-start space-x-4">
+              <Image
+                src={user}
+                alt={username}
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+              <div className="grow">
+                <div className="flex justify-between">
+                  <p className="font-semibold text-black dark:text-white">
+                    exyreams
+                  </p>
+                </div>
+                <div className="mt-2 rounded-lg border border-gray-300 bg-stackup-gray-text/80 p-4 dark:border-gray-700">
+                  <p className="text">I need to learn to code more properly.</p>
+                </div>
               </div>
             </div>
             <div className="mb-5 flex items-start space-x-4">

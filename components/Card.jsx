@@ -1,6 +1,6 @@
-
 /* eslint-disable react/react-in-jsx-scope */
 import Image from "next/image";
+// import Link from "next/link";
 import PropTypes from "prop-types";
 import { IoIosArrowForward } from "react-icons/io";
 
@@ -8,7 +8,7 @@ import { user } from "../assets/";
 
 export function Card({ description, projectname, techstack, username }) {
   return (
-    <div className='group/card w-350'>
+    <div className="group/card w-350">
       <div className=" card backgroundImage relative mx-auto flex h-96 cursor-pointer flex-col justify-between overflow-hidden rounded-md p-4 shadow-xl">
         <div className="absolute left-0 top-0 h-full w-full opacity-60 transition duration-300 group-hover/card:bg-black"></div>
         <div className="z-10 flex flex-row items-center space-x-4">
@@ -36,6 +36,12 @@ export function Card({ description, projectname, techstack, username }) {
             {description}
           </p>
           <div className="mt-auto">
+            {/* <Link href={href}>
+              <button className="relative z-10 ml-auto flex flex-row items-center text-gray-50 transition-colors duration-200 hover:text-white">
+                View
+                <IoIosArrowForward className="ml-1" />
+              </button>
+            </Link> */}
             <button className="relative z-10 ml-auto flex flex-row items-center text-gray-50 transition-colors duration-200 hover:text-white">
               View
               <IoIosArrowForward className="ml-1" />

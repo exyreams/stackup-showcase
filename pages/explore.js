@@ -118,6 +118,7 @@ const Explore = () => {
           <li>
             <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/gradient-ui-ux-elements_23-2149057417.jpg?t=st=1721488276~exp=1721491876~hmac=f9acf3753620884488d6053ee2a4dd20f7b9bcc2aab0dfdc4829eed7d3683cc6&w=996)] bg-cover bg-center">
               <Card
+                className="cursor-not-allowed"
                 username="debugdiva"
                 techstack="React, Node.js, MongoDB"
                 projectname="BudgetBuddy"

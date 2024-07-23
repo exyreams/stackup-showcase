@@ -71,14 +71,16 @@ const Index = () => {
         {/* Feature projects */}
         <ul className="flex flex-row flex-wrap items-center gap-8 p-5">
           <li>
-            <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/vector-abstract-3d-room-with-luxury-cylinder-stand-podium_8829-2843.jpg?t=st=1721495095~exp=1721498695~hmac=e7107d2ea6f3aab9e84b29fa72f15df002729cf960d98476244c8a9c87dd08b4&w=360)] bg-cover bg-center">
-              <Card
-                username="exyreams"
-                techstack="React, Tailwind"
-                projectname="Stackup-Showcase"
-                description="A collaborative platform where users can showcase their projects, receive feedback, and seek help from the community to enhance their work."
-              />
-            </div>
+            <Link href="/showcase">
+              <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/vector-abstract-3d-room-with-luxury-cylinder-stand-podium_8829-2843.jpg?t=st=1721495095~exp=1721498695~hmac=e7107d2ea6f3aab9e84b29fa72f15df002729cf960d98476244c8a9c87dd08b4&w=360)] bg-cover bg-center">
+                <Card
+                  username="exyreams"
+                  techstack="React, Tailwind"
+                  projectname="Stackup-Showcase"
+                  description="A collaborative platform where users can showcase their projects, receive feedback, and seek help from the community to enhance their work."
+                />
+              </div>
+            </Link>
           </li>
           <li>
             <div className="rounded-md bg-[url(https://img.freepik.com/free-vector/postponed-concept-illustrated_23-2148500731.jpg?t=st=1721490799~exp=1721494399~hmac=41be28daf3a7ee94bba2f81b8b29acf4f16dfbdcd05d9f1f653a539cbc555449&w=740)] bg-cover bg-center">
