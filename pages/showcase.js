@@ -201,8 +201,8 @@ export default Tooltips;
             <Image
               src={showcaseCover}
               alt="Project Cover"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
             />
           </div>
 
@@ -357,13 +357,13 @@ export default Tooltips;
             <h2 className="text-2xl font-bold text-black dark:text-white">
               The Countdown Implementation
             </h2>
-            <Codeblock code={countdownblock} />
+            <Codeblock code={countdownblock} language="javascript" />
           </div>
           <div className="mt-8">
             <h2 className="text-2xl font-bold text-black dark:text-white">
               The Cool Tooltip Implementation
             </h2>
-            <Codeblock code={tootipscodeblock} />
+            <Codeblock code={tootipscodeblock} language="javascript" />
           </div>
 
           <div className="mt-8">
@@ -374,7 +374,7 @@ export default Tooltips;
               This part took me most of the time creating in the whole project.
               But I really enjoyed creating it. I hope you enjoy it too.
             </p>
-            <Codeblock code={commentsection} />
+            <Codeblock code={commentsection} language="javascript" />
             <p className="mt-4 text-black dark:text-white">
               Showcase is more than just a platform; It&#39;s a community of
               developers who are passionate about learning, growing, and
